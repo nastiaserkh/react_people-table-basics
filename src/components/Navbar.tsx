@@ -18,7 +18,7 @@ export const Navbar = () => {
             className={classNames('navbar-item', {
               'has-background-grey-lighter': path === '/',
             })}
-            to="../"
+            to="/"
           >
             Home
           </Link>

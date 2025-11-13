@@ -41,7 +41,7 @@ export const PeopleTable: React.FC<Props> = ({ people, active }) => {
               <PersonLink
                 person={person}
                 key={person.slug}
-                activePerson={activePerson!}
+                activePerson={activePerson}
               />
             ))}
           </tbody>

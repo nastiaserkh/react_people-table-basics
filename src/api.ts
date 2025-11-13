@@ -15,7 +15,7 @@ export function getPeople(): Promise<Person[]> {
     .then(response => response.json())
     .then((people: Person[]) => {
       return people.map(person => {
-        const personWithParents = person;
+        const personWithParents = { ...person };
 
         personWithParents.mother = people.find(
           s => s.name === person.motherName,

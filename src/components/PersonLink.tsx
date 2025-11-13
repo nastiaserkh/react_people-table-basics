@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 type Props = {
   person: Person;
-  activePerson: Person;
+  activePerson?: Person;
 };
 
 export const PersonLink: React.FC<Props> = ({ person, activePerson }) => (
@@ -34,14 +34,14 @@ export const PersonLink: React.FC<Props> = ({ person, activePerson }) => (
           {person.motherName}
         </Link>
       ) : (
-        (person.motherName ?? '-')
+        person.motherName || '-'
       )}
     </td>
     <td>
       {person.father ? (
         <Link to={`/people/${person.father.slug}`}>{person.fatherName}</Link>
       ) : (
-        (person.fatherName ?? '-')
+        person.fatherName || '-'
       )}
     </td>
   </tr>
